@@ -50,4 +50,4 @@ Before running the project, please make sure that you have:
    - BigQuery Admin
    - Storage Admin
 4. The GCP credentials file saved to the project's root on your machine.
-5. Rename the file from item 4 to "credentials.json"
+5. Renamed the file from item 4 to "credentials.json"
