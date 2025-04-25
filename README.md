@@ -4,9 +4,9 @@
 This project creates an end-to-end pipeline for income and health issues data in the US. This pipeline can run on multiple machines by using Docker to containerize it.
 
 ## Tools used on the project
-The tools can be ilustrated by the following image:
+The data tools can be ilustrated by the following image:
 
-![image](https://github.com/user-attachments/assets/c16db90b-888b-4a86-84e7-a01c2f808283)
+![image](https://github.com/user-attachments/assets/78381c16-e94f-4dbd-ba51-7c02ffb81e64)
 
 - Extraction: Python scripts to fetch data from multiple API sources;
 - Cleaning: done with pandas, prototyped with Jupyter Notebook;
@@ -14,7 +14,8 @@ The tools can be ilustrated by the following image:
 - Storage: In the cloud, with GCS Bucket;
 - Data Warehouse: BigQuery;
 - Transformation: runs on dbt, also includes testing;
-- Orchestration: Every step of the pipeline is managed by Apache Airflow.
+- Orchestration: Every step of the pipeline is managed by Apache Airflow;
+- Data visualization: Looker.
 
 ## Running the project
 Before running the project, please make sure that you have:
