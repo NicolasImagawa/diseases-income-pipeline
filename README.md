@@ -22,8 +22,8 @@ Before running the project, please make sure that you have:
 1. A GCP (Google Cloud Platform account) with billing enabled;
 2. Create a project on GCP 
 3. A GCP service account with the following permissions:
-   3.1. BigQuery Admin
-   3.2. Storage Admin
+   - BigQuery Admin
+   - Storage Admin
 4. The GCP credentials json file saved to the project's root on your machine.
 
 ## Transformation 
