@@ -1,7 +1,7 @@
 # ELT pipeline for income and health issues correlations across the USA
 
 ## Overview
-This project creates an end-to-end pipeline for income and health issues data in the US. This pipeline can run on multiple machines by using Docker to containerize it.
+This project creates an end-to-end pipeline for income and health issues correlation data in the US for the year 2021 and adjusts food prices considering inflation. This pipeline can run on multiple machines by using Docker to containerize it.
 
 ## Tools used on the project
 The data tools can be ilustrated by the following image:
@@ -43,7 +43,7 @@ Multiple DAGs were developed in order to achieve modularity in the pipeline.
 The 1st DAG can trigger its subsequent and so on, making the end-to-end operation easier for the user.
 
 ## Data visualization
-There are many correlation analysis to be done with the pipeline results. For instance, one can see what states had the lowest consumption of fruits for 2021 and if these same places will have the highest diabetes cases per 100,000 people.
+There are many correlation analysis to be done with the pipeline results. For instance, one can see what states had the adults with the lowest fruits comsuption for 2021 and if these same places will have the highest diabetes cases per 100,000 people.
 ![image](https://github.com/user-attachments/assets/c2b99cc8-bbfe-4849-bf35-2aa4ab4f96a3)
 
 ![image](https://github.com/user-attachments/assets/549cf57f-e469-4c11-9523-f4dba605b7f2)
