@@ -1,0 +1,512 @@
+version: 2
+
+sources:
+  - name: ext_tables
+    database: {project}
+    schema: {dataset}
+    tables:
+      - name: ext_dim_behavior
+      - name: ext_dim_datatype
+      - name: ext_dim_datatype_datatypeunit
+      - name: ext_dim_datatypeid
+      - name: ext_dim_datatypeunit
+      - name: ext_dim_disease
+      - name: ext_dim_fruitsprices
+      - name: ext_dim_question
+      - name: ext_dim_questionid
+      - name: ext_dim_stratification
+      - name: ext_dim_stratification_stratificationid
+      - name: ext_dim_stratificationcatid
+      - name: ext_dim_stratificationid
+      - name: ext_dim_topic
+      - name: ext_dim_topic_question
+      - name: ext_dim_topicid
+      - name: ext_dim_topicid_questionid
+      - name: ext_dim_vegetableprices
+  - name: seed_tables
+    database: {project}
+    schema: {dataset}
+    tables:
+      - name: states
+      - name: states_num
+
+models:
+  - name: dim_behavior
+    description: "Initial data for behavior analysis."
+    columns:
+      - name: year_start
+        description: "Start year for data collected."
+        data_tests:
+          - not_null
+
+      - name: year_end
+        description: "End year for data collected."
+        data_tests:
+          - not_null
+
+      - name: state_num
+        description: "State number for identification."
+        data_tests:
+          - not_null
+
+      - name: topic_num
+        description: "Topic number for identification."
+        data_tests:
+          - not_null
+
+      - name: question_num
+        description: "Question number for identification."
+        data_tests:
+          - not_null
+
+      - name: stratification_id_num
+        description: "Stratification ID for identification."
+        data_tests:
+          - not_null
+
+      - name: stratification_num
+        description: "Stratification number for identification."
+        data_tests:
+          - not_null
+
+      - name: data_value_unit
+        description: "Data value unit for identification."
+        data_tests:
+          - not_null
+
+      - name: data_value
+        description: "Survey's result."
+        data_tests:
+          - not_null
+
+      - name: data_value_alt
+        description: "Alternative value for the survey's result."
+        data_tests:
+          - not_null
+
+  - name: dim_datatype
+    description: "Datatype category lookup table."
+    columns:
+      - name: data_value_type_num
+        description: "Data Value type number identification."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: data_value_type
+        description: "Data value type category."
+        data_tests:
+          - not_null
+
+  - name: dim_datatype_datatypeunit
+    description: "Relations between datatype and datatypeunit as a lookup table."
+    columns:
+      - name: datatypeunit_num
+        description: "The id for the data type unit."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: data_value_type_num
+        description: "The id for the data value type."
+        data_tests:
+          - not_null
+
+  - name: dim_datatypeid
+    description: "Relations between data value type num and data type id as a lookup table."
+    columns:
+      - name: data_value_type_num
+        description: "The data value type number."
+        data_tests:
+          - not_null
+
+      - name: data_value_type_id
+        description: "The id for the data value type."
+        data_tests:
+          - not_null
+
+
+  - name: dim_datatypeunit
+    description: "Relations between data type unit and data value unit as a lookup table."
+    columns:
+      - name: datatypeunit_num
+        description: "The id for the data type unit"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: data_value_type_num
+        description: "The id for the data value type"
+        data_tests:
+          - not_null
+
+  - name: dim_disease
+    description: "Initial data for disease analysis."
+    columns:
+      - name: year_start
+        description: "Start year for data collected."
+        data_tests:
+          - not_null
+
+      - name: year_end
+        description: "End year for data collected."
+        data_tests:
+          - not_null
+
+      - name: state_num
+        description: "State number for identification."
+        data_tests:
+          - not_null
+
+      - name: data_source
+        description: "Who collected the data."
+        data_tests:
+          - not_null
+
+      - name: topic_num
+        description: "Topic number for identification."
+        data_tests:
+          - not_null
+
+      - name: question_num
+        description: "Question number for identification."
+        data_tests:
+          - not_null
+
+      - name: data_value_type_num
+        description: "Data value type number identification."
+        data_tests:
+          - not_null
+
+      - name: stratification_num
+        description: "Stratification number for identification."
+        data_tests:
+          - not_null
+
+      - name: stratification_id_num
+        description: "Stratification ID for identification."
+        data_tests:
+          - not_null
+
+      - name: data_value
+        description: "Survey's result."
+        data_tests:
+          - not_null
+
+      - name: data_value_alt
+        description: "Alternative value for the survey's result."
+        data_tests:
+          - not_null
+
+      - name: low_confidence_limit
+        description: "Low confidence limit for the data."
+
+      - name: high_confidence_limit
+        description: "High confidence limit for the data."
+
+  - name: dim_fruitsprices
+    description: "Base data for fruit prices analysis."
+    columns:
+      - name: fruit
+        description: "Fruits names."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: form
+        description: "How the fruit is sold."
+        data_tests:
+          - not_null
+
+      - name: retail_price
+        description: "Retail price for each fruit."
+        data_tests:
+          - not_null
+
+      - name: retail_price_unit
+        description: "Unit for selling the fruits."
+        data_tests:
+          - not_null
+
+      - name: yield
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: cup_equivalent_size
+        description: ""
+        data_tests:
+          - not_null
+      
+      - name: cup_equivalent_unit
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: cup_equivalent_price
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: dim_question
+    description: "Identifies each question thourgh a number."
+    columns:
+      - name: question_num
+        description: "Question number identification."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: question
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: dim_questionid
+    description: "Identifies each question id thourgh a number."
+    columns:
+      - name: question_num
+        description: "Question number identification."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: question_id
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: dim_stratification
+    description: "Identifies each stratification category thourgh a number."
+    columns:
+      - name: stratification_num
+        description: "Stratification number identification."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: stratification_cat_1
+        description: ""
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_stratification_stratificationid
+    description: "Identifies each stratification id thourgh a number."
+    columns:
+      - name: stratification_num
+        description: "Stratification number identification."
+        data_tests:
+          - not_null
+
+      - name: stratification_id_num
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: dim_stratificationcatid
+    description: "Identifies each stratification category id thourgh a number."
+    columns:
+      - name: stratification_num
+        description: "Stratification number identification."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: stratification_cat_id_1
+        description: ""
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_stratificationid
+    description: "Identifies each stratification id thourgh a number."
+    columns:
+      - name: stratification_id_num
+        description: "Stratification number identification."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: stratification_id_1
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: dim_topic
+    description: "Identifies each topic thourgh a number."
+    columns:
+      - name: topic_num
+        description: "Topic number identification."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: topic
+        description: ""
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_topic_question
+    description: "Relation between topic id and question id."
+    columns:
+      - name: topic_id
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: question_id
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: dim_topicid
+    description: "Relation between topic num and topic id."
+    columns:
+      - name: topic_num
+        description: ""
+        data_tests:
+          - not_null
+          - unique
+
+      - name: topic_id
+        description: ""
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_topicid_questionid
+    description: "Relation between topic num and question num."
+    columns:
+      - name: topic_num
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: question_num
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: dim_vegetableprices
+    description: "Base data for vegetable prices."
+    columns:
+      - name: vegetable
+        description: "Vegetable name"
+        data_tests: 
+          - not_null
+          - unique
+
+      - name: form
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: retail_price
+        description: "Retail price for each vegetable."
+        data_tests:
+          - not_null
+
+      - name: retail_price_unit
+        description: "Unit for selling the vegetable."
+        data_tests:
+          - not_null
+
+      - name: yield
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: cup_equivalent_size
+        description: ""
+        data_tests:
+          - not_null
+      
+      - name: cup_equivalent_unit
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: cup_equivalent_price
+        description: ""
+        data_tests:
+          - not_null
+
+  - name: fact_behavior
+    description: "Fact table for behavior data."
+    columns:
+      - name: year_start
+        description: ""
+        data_tests: 
+          - unique
+
+      - name: year_end
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: state_num
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: state_abr
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: topic_num
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: topic
+        description: ""
+        data_tests:
+          - not_null
+      
+      - name: question_num
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: question_id
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: stratification_num
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: stratification_cat_1
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: stratification_id_num
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: stratification_id_1
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: data_value_unit
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: data_value
+        description: ""
+        data_tests:
+          - not_null
+
+      - name: data_value_alt
+        description: ""
+        data_tests:
+          - not_null

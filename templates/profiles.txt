@@ -1,0 +1,14 @@
+diseases_and_income_US:
+  outputs:
+    dev:
+      dataset: {dataset}
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: "/opt/airflow/credentials.json"
+      location: US
+      method: service-account
+      priority: interactive
+      project: {project}
+      threads: 4
+      type: bigquery
+  target: dev

@@ -1,0 +1,6 @@
+requests
+pandas
+google-cloud-storage
+google-auth
+apache-airflow
+pyyaml

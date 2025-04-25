@@ -1,0 +1,48 @@
+version: 2
+
+seeds:
+  - name: states_num
+    description: "States numbers and abreviations."
+    columns:
+      - name: state_num
+        description: "State number"
+        tests: 
+          - not_null:
+              config:
+                severity: error            
+          - unique:
+              config:
+                severity: error
+
+      - name: state_abr
+        description: "State abreviation"
+        tests: 
+          - not_null:
+              config:
+                severity: error
+          - unique:
+              config:
+                severity: error
+
+  - name: states
+    description: "States numbers and abreviations."
+    columns:
+      - name: state_num
+        description: "State number"
+        tests: 
+          - not_null:
+              config:
+                severity: error            
+          - unique:
+              config:
+                severity: error
+
+      - name: state_name
+        description: "State abreviation"
+        tests: 
+          - not_null:
+              config:
+                severity: error
+          - unique:
+              config:
+                severity: error

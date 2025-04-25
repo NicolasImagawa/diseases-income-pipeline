@@ -1,0 +1,2 @@
+# change the value on CLI and write the variable on SQL files you want to limit.
+dbt build --var 'is_test_run: false'
