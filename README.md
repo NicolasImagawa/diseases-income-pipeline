@@ -40,7 +40,8 @@ Then, the fact tables for diseases, behavior, fruit and vegetable prices are cre
 
 
 ## Running the project
-[!IMPORTANT] Please make sure the GCP credentials file is on the project's root and won't available to public access
+> [!IMPORTANT]
+> Please make sure the GCP credentials file is on the project's root and won't available to public access
 Before running the project, please make sure that you have:
 1. A GCP (Google Cloud Platform account) with billing enabled;
 2. Create a project on GCP 
