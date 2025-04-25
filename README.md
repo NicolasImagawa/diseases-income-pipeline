@@ -17,17 +17,21 @@ The data tools can be ilustrated by the following image:
 - Orchestration: Every step of the pipeline is managed by Apache Airflow;
 - Data visualization: Looker.
 
+## Transformation 
+As stated before, dbt transforms the data in the warehouse in order to create a star schema. First, the external tables are utilized as a staging area for the dimension tables.
+Then, the fact tables for diseases, behavior, fruit and vegetable prices are created. The lineage is shown below, for more details please check the dbt folder.
+
+![image](https://github.com/user-attachments/assets/dcfd2603-6522-4cca-91f2-c8f7e194bbd6)
+
+## Orchestration DAGs
+
 ## Running the project
+[!IMPORTANT] Please make sure the GCP credentials file is on the project's root and won't available to public access
 Before running the project, please make sure that you have:
 1. A GCP (Google Cloud Platform account) with billing enabled;
 2. Create a project on GCP 
 3. A GCP service account with the following permissions:
    - BigQuery Admin
    - Storage Admin
-4. The GCP credentials json file saved to the project's root on your machine.
-
-## Transformation 
-
-## Orchestration DAGs
-
-
+4. The GCP credentials file saved to the project's root on your machine.
+5. Rename the file from item 4 to "credentials.json"
