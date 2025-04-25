@@ -36,13 +36,21 @@ Then, the fact tables for diseases, behavior, fruit and vegetable prices are cre
 ![image](https://github.com/user-attachments/assets/dcfd2603-6522-4cca-91f2-c8f7e194bbd6)
 
 ## Orchestration DAGs
-Multiple DAGs were developed in order to achieve modularity in the pipeline. Therefore, the project has 5 DAGs:
+Multiple DAGs were developed in order to achieve modularity in the pipeline.
 
 ![image](https://github.com/user-attachments/assets/7f8c670d-cb97-4d38-997d-1e17a907669d)
 
 The 1st DAG can trigger its subsequent and so on, making the end-to-end operation easier for the user.
 
 ## Data visualization
+There are many correlation analysis to be done with the pipeline results. For instance, one can see what states had the lowest consumption of fruits for 2021 and if these same places will have the highest diabetes cases per 100,000 people.
+![image](https://github.com/user-attachments/assets/c2b99cc8-bbfe-4849-bf35-2aa4ab4f96a3)
+
+![image](https://github.com/user-attachments/assets/549cf57f-e469-4c11-9523-f4dba605b7f2)
+
+Also, the pipeline provides vegetable and fruits prices adjusted to inflation, in order to analyze how hard it is to buy food that is technically healthy.
+![image](https://github.com/user-attachments/assets/a9f469a8-e20a-43d3-a54f-b6d627656017)
+
 
 ## Running the project
 > [!IMPORTANT]
