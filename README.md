@@ -17,6 +17,18 @@ The data tools can be ilustrated by the following image:
 - Orchestration: Every step of the pipeline is managed by Apache Airflow;
 - Data visualization: Looker.
 
+## Data Cleaning
+The data was cleansed and adapted to follow the same pattern when required. For instance, columns with null values were removed for the pipeline downstream components and columns such as questionid had to be adjusted to follow the pattern "ABC01".
+
+Also, the column names were changed to standardize dimensions across the dataset/schema.
+
+Since US territories were considered by the data source, more than 50 were expected on the cleaning output. On this case, 55 States and territories were considered.
+
+Finally, all the outputs were saved as .csv files.
+
+[!NOTE]
+The data cleaning was prototyped with Jupyter Notebook and is located on the "Notebook Prototypes" files.
+
 ## Transformation 
 As stated before, dbt transforms the data in the warehouse in order to create a star schema. First, the external tables are utilized as a staging area for the dimension tables.
 Then, the fact tables for diseases, behavior, fruit and vegetable prices are created. The lineage is shown below, for more details please check the dbt folder.
@@ -24,6 +36,8 @@ Then, the fact tables for diseases, behavior, fruit and vegetable prices are cre
 ![image](https://github.com/user-attachments/assets/dcfd2603-6522-4cca-91f2-c8f7e194bbd6)
 
 ## Orchestration DAGs
+
+
 
 ## Running the project
 [!IMPORTANT] Please make sure the GCP credentials file is on the project's root and won't available to public access
