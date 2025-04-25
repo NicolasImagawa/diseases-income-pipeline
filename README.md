@@ -36,8 +36,13 @@ Then, the fact tables for diseases, behavior, fruit and vegetable prices are cre
 ![image](https://github.com/user-attachments/assets/dcfd2603-6522-4cca-91f2-c8f7e194bbd6)
 
 ## Orchestration DAGs
+Multiple DAGs were developed in order to achieve modularity in the pipeline. Therefore, the project has 5 DAGs:
 
+![image](https://github.com/user-attachments/assets/7f8c670d-cb97-4d38-997d-1e17a907669d)
 
+The 1st DAG can trigger its subsequent and so on, making the end-to-end operation easier for the user.
+
+## Data visualization
 
 ## Running the project
 > [!IMPORTANT]
