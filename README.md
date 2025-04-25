@@ -26,8 +26,8 @@ Since US territories were considered by the data source, more than 50 were expec
 
 Finally, all the outputs were saved as .csv files.
 
-[!NOTE]
-The data cleaning was prototyped with Jupyter Notebook and is located on the "Notebook Prototypes" files.
+> [!NOTE]
+> The data cleaning was prototyped with Jupyter Notebook and is located on the "Notebook Prototypes" files.
 
 ## Transformation 
 As stated before, dbt transforms the data in the warehouse in order to create a star schema. First, the external tables are utilized as a staging area for the dimension tables.
@@ -42,6 +42,7 @@ Then, the fact tables for diseases, behavior, fruit and vegetable prices are cre
 ## Running the project
 > [!IMPORTANT]
 > Please make sure the GCP credentials file is on the project's root and won't available to public access
+
 Before running the project, please make sure that you have:
 1. A GCP (Google Cloud Platform account) with billing enabled;
 2. Create a project on GCP 
