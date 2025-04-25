@@ -1,7 +1,7 @@
 # ELT pipeline for income and health issues correlations across the USA
 
 ## Overview
-This project creates an end-to-end pipeline for income and health issues correlation data in the US for the year 2021 and adjusts food prices considering inflation. This pipeline can run on multiple machines by using Docker to containerize it.
+This project creates an end-to-end pipeline for income and health issues correlation data in the US for the year 2021 and adjusts food prices considering inflation. This pipeline can run on multiple machines by using `Docker` to containerize it.
 
 ## Tools used on the project
 The data tools can be ilustrated by the following image:
@@ -58,10 +58,17 @@ Also, the pipeline provides vegetable and fruits prices adjusted to inflation, i
 > Please make sure the GCP credentials file is on the project's root and won't available to public access
 
 Before running the project, please make sure that you have:
-1. A GCP (Google Cloud Platform account) with billing enabled;
-2. Create a project on GCP 
-3. A GCP service account with the following permissions:
+1. Cloned this repo
+2. A GCP (Google Cloud Platform account) with billing enabled;
+3. Create a project on GCP 
+4. A GCP service account with the following permissions:
    - BigQuery Admin
    - Storage Admin
-4. The GCP credentials file saved to the project's root on your machine.
-5. Renamed the file from item 4 to "credentials.json"
+5. The GCP credentials file saved to the project's root on your machine.
+6. Renamed the file from item 4 to "credentials.json"
+
+After the above instructions, run the following command on the project's root directory:
+
+```
+./run_project.sh
+```
