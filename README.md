@@ -51,10 +51,13 @@ There are many correlation analysis to be done with the pipeline results. For in
 
 ![image](https://github.com/user-attachments/assets/e6e3debc-f2c1-4541-b69b-568e44e96e5f)
 
+
+
 ![image](https://github.com/user-attachments/assets/3bd6464e-1358-4ed9-bc61-6ad455b3cf98)
 
 
 Also, the pipeline provides vegetable and fruits prices adjusted to inflation, in order to analyze how hard it is to buy food that is technically healthy.
+
 ![image](https://github.com/user-attachments/assets/453528ce-23a0-46c5-ad81-2515e440d3d9)
 
 From the data shown above, some states with the least vegetable consumption do appear in the diabetes chart, like Texas and New Mexico. However, diabetes may develop further on many people and the data shows only adults and not elderly people.
