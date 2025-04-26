@@ -29,11 +29,11 @@ Since US territories were considered by the data source, more than 50 were expec
 Finally, all the outputs were saved as .csv files.
 
 > [!NOTE]
-> The data cleaning was prototyped with Jupyter Notebook and is located on the "Notebook Prototypes" files.
+> The data cleaning was prototyped with Jupyter Notebook and is located on the ["Notebook Prototypes"](https://github.com/NicolasImagawa/diseases-income-pipeline/tree/main/Notebook%20prototypes) files.
 
 ## Transformation 
 As stated before, dbt transforms the data in the warehouse in order to create a star schema. First, the external tables are utilized as a staging area for the dimension tables.
-Then, the fact tables for diseases, behavior, fruit and vegetable prices are created. The lineage is shown below, for more details please check the dbt folder.
+Then, the fact tables for diseases, behavior, fruit and vegetable prices are created. The lineage is shown below, for more details please check the [dbt folder](https://github.com/NicolasImagawa/diseases-income-pipeline/tree/main/dbt).
 
 ![image](https://github.com/user-attachments/assets/dcfd2603-6522-4cca-91f2-c8f7e194bbd6)
 
@@ -45,7 +45,7 @@ Multiple DAGs were developed in order to achieve modularity in the pipeline.
 The 1st DAG can trigger its subsequent and so on, making the end-to-end operation easier for the user.
 
 ## Data visualization
-There are many correlation analysis to be done with the pipeline results. For instance, one can see what states had the adults (18 to 44 years) with the lowest fruits comsuption for 2021 and if these same places will have the highest diabetes cases per 100,000  people and considering an 15 to 25 thousand USD income.
+There are many correlation analysis to be done with the pipeline results. For instance, one can see what states had the adults (18 to 44 years) with the lowest fruits comsuption for 2021 and if these same places will have the highest diabetes cases per 100,000 people and considering an 15 to 25 thousand USD income.
 
 ![image](https://github.com/user-attachments/assets/e6e3debc-f2c1-4541-b69b-568e44e96e5f)
 
@@ -60,7 +60,7 @@ Also, the vegetable charts shows that the most expensive items are not that comm
 
 ## Running the project
 > [!IMPORTANT]
-> Please make sure the GCP credentials file is on the project's root and won't available to public access
+> Please make sure the GCP credentials file is on the project's root and won't available to public access.
 
 Before running the project, please make sure that you have:
 1. Cloned this repo
