@@ -43,11 +43,11 @@ Multiple DAGs were developed in order to achieve modularity in the pipeline.
 The 1st DAG can trigger its subsequent and so on, making the end-to-end operation easier for the user.
 
 ## Data visualization
-There are many correlation analysis to be done with the pipeline results. For instance, one can see what states had the adults with the lowest fruits comsuption for 2021 and if these same places will have the highest diabetes cases per 100,000  people and considering an 15 to 25 thousand USD income.
+There are many correlation analysis to be done with the pipeline results. For instance, one can see what states had the adults (18 to 44 years) with the lowest fruits comsuption for 2021 and if these same places will have the highest diabetes cases per 100,000  people and considering an 15 to 25 thousand USD income.
 
-![image](https://github.com/user-attachments/assets/c2b99cc8-bbfe-4849-bf35-2aa4ab4f96a3)
+![image](https://github.com/user-attachments/assets/a7b7c633-3d34-4ad9-ac5f-baf3dc2d1b40)
 
-![image](https://github.com/user-attachments/assets/549cf57f-e469-4c11-9523-f4dba605b7f2)
+![image](https://github.com/user-attachments/assets/560d1eb7-0130-4cb7-99a4-91fe117661bd)
 
 Also, the pipeline provides vegetable and fruits prices adjusted to inflation, in order to analyze how hard it is to buy food that is technically healthy.
 ![image](https://github.com/user-attachments/assets/a9f469a8-e20a-43d3-a54f-b6d627656017)
