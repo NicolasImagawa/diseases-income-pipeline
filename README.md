@@ -3,7 +3,7 @@
 ## Overview
 This project creates an end-to-end pipeline for income and health issues correlation data in the US for the year 2021 and adjusts food prices considering inflation. This pipeline can run on multiple machines by using `Docker` to containerize it.
 
-if you simply want to run this project, jump to the ["Running the project" section.] (#running-the-project)
+if you simply want to run this project, jump to the ["Running the project" section.](#running-the-project)
 
 ## Tools used on the project
 The data tools can be ilustrated by the following image:
