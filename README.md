@@ -54,7 +54,7 @@ Also, the pipeline provides vegetable and fruits prices adjusted to inflation, i
 ![image](https://github.com/user-attachments/assets/453528ce-23a0-46c5-ad81-2515e440d3d9)
 
 From the data shown above, some states with the least vegetable consumption do appear in the diabetes chart, like Texas and New Mexico. However, diabetes may develop further on many people and the data shows only adults and not elderly people.
-Also, the vegetable charts show that the most expensive items are not that commom on the average north american nutrition and dishes such as Aspargus, Olivia and Okra. Therefore, any analyzis regarding socioeconomical relations between health and income must seek other patterns.
+Also, the vegetable charts shows that the most expensive items are not that commom on the average North American nutrition and dishes such as Aspargus, Olivia and Okra. Therefore, any analyzis regarding socioeconomical relations between health and income must seek other patterns.
 
 ## Running the project
 > [!IMPORTANT]
