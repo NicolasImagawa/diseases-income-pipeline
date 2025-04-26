@@ -37,4 +37,4 @@ docker compose up -d
 echo "Loading Airflow..."
 sleep 75
 
-echo "Please check the Airflow UI at https://localhost:8080"
+echo "Please check the Airflow UI at https://localhost:8181"
