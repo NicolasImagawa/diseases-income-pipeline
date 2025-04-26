@@ -55,7 +55,7 @@ There are many correlation analysis to be done with the pipeline results. For in
 \
 ![image](https://github.com/user-attachments/assets/3bd6464e-1358-4ed9-bc61-6ad455b3cf98)
 
-
+\
 Also, the pipeline provides vegetable and fruits prices adjusted to inflation, in order to analyze how hard it is to buy food that is technically healthy.
 \
 \
