@@ -22,6 +22,8 @@ The data tools can be ilustrated by the following image:
 ## Data Cleaning
 The data was cleansed and adapted to follow the same pattern when required. For instance, columns with null values were removed for the pipeline downstream components and columns such as questionid had to be adjusted to follow the pattern "ABC01".
 
+In order to optimize storage, the dim_behavior and dim_diseases table use integers instead of strings and any unnecessary data from the extracted data. When necessary, any further details are obtained with other dimensional tables created and applied to the downstream data.
+
 Also, the column names were changed to standardize dimensions across the dataset/schema.
 
 Since US territories were considered by the data source, more than 50 were expected on the cleaning output. On this case, 55 States and territories were considered.
