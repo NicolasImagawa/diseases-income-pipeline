@@ -95,3 +95,8 @@ Use "airflow" on both "Username" and "Password"
 
 Finally, run the DAGs to see the pipeline in action!
 
+### Further improvements
+
+- CI/CD implementation;
+- Year partitioning, in case the dataset grows to large;
+- Unit and Integration tests
