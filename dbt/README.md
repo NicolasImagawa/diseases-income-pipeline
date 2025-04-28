@@ -28,5 +28,5 @@ dbt docs serve
 
 The lineage shall be given on `http://localhost:8080`
 
-[!NOTE]
+> [!NOTE]
 > It is important to note that the staging, fact and dimensional models are not incremental. This means the tables will be rebuilt every time we run the models. If we plan to ingest data in specific intervals (e.g. each day) then these models should use the 'Incremental' table configuration. For the purpose of this project using a table configuration is enough.
