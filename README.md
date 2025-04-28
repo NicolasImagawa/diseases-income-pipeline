@@ -82,7 +82,7 @@ Before running the project, please make sure that you have:
 After the above instructions, run the following command on the project's root directory:
 
 ```
-./run_project.sh
+./run_pipeline.sh
 ```
 
 Then, access airflow on the following port:
