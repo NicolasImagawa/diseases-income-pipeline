@@ -75,8 +75,9 @@ Before running the project, please make sure that you have:
 4. A GCP service account with the following permissions:
    - BigQuery Admin
    - Storage Admin
-5. The GCP credentials file saved to the project's root on your machine.
-6. Renamed the file from item 4 to "credentials.json"
+5. The GCP credentials file saved to the project's root on your machine;
+6. Renamed the file from item 4 to "credentials.json";
+7. Docker installed on your machine.
 
 After the above instructions, run the following command on the project's root directory:
 
