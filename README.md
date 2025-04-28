@@ -83,3 +83,14 @@ After the above instructions, run the following command on the project's root di
 ```
 ./run_project.sh
 ```
+
+Then, access airflow on the following port:
+
+```
+https://localhost:8181
+```
+
+Use "airflow" on both "Username" and "Password"
+
+Finally, run the DAGs to see the pipeline in action!
+
