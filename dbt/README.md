@@ -8,9 +8,7 @@ This pipeline step starts with external tables created with the Terraform IaC. T
 
 On the ["models/core"](https://github.com/NicolasImagawa/diseases-income-pipeline/tree/main/dbt/models/core) folder, there are all the SQL files regarding the dimensions and fact tables. Since the dataset is not large and the time dimension is yearly, there was no need to partition the tables. However, the tables are clustered whenever a upstream table will be filtered intensively on a set of columns.
 
-For instance, the ["fact_disease.sql"](https://github.com/NicolasImagawa/diseases-income-pipeline/blob/main/dbt/models/core/fact_disease.sql) file is clusterized by the following columns: `question_id`, `data_value_unit`, `stratification_cat_1` and `stratification_id_1`. This helps filtering its downtream table, ["sum_disease.sql"](https://github.com/NicolasImagawa/diseases-income-pipeline/blob/main/dbt/models/core/sum_disease.sql) which filters its upstream counterpart on the columns previously mentioned.
-
-This pattern occurs for all the tables on the dataset/schema.
+For instance, the ["fact_disease.sql"](https://github.com/NicolasImagawa/diseases-income-pipeline/blob/main/dbt/models/core/fact_disease.sql) file is clusterized by the following columns: `question_id`, `data_value_unit`, `stratification_cat_1` and `stratification_id_1`. This helps filtering its downtream table, ["sum_disease.sql"](https://github.com/NicolasImagawa/diseases-income-pipeline/blob/main/dbt/models/core/sum_disease.sql) which filters its upstream counterpart on the columns previously mentioned - This pattern occurs for all the tables on the dataset/schema.
 
 Since some of the data is unlikely to change, such as CPI values and states names, the `cpi_2022_2025`, `states_num` and `states tables` are seeded through dbt.
 
