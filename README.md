@@ -66,7 +66,7 @@ Also, the vegetable charts shows that the most expensive items are not that comm
 
 ## Running the project
 > [!IMPORTANT]
-> Please make sure the GCP credentials file is on the project's root and won't available to public access.
+> Please make sure the GCP credentials file is on the project's root and won't be available to public access.
 
 Before running the project, please make sure that you have:
 1. Cloned this repo
