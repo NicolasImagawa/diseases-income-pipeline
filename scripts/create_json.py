@@ -13,12 +13,13 @@
 
 import argparse
 import json
+import random
 
 def main(params):
     config_dict = {
         "project": params.project,
         "dataset": params.dataset,
-        "bucket": params.bucket
+        "bucket": f"{params.bucket}-{random.randrange(0,100000):06.0f}"
     }
 
     configs = json.dumps(config_dict, indent = 4)

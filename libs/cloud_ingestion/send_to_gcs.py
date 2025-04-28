@@ -3,9 +3,15 @@ from google.cloud import storage
 from google.oauth2 import service_account
 
 def upload_files():
+    import json
+
     FILE_NAMES = os.listdir("./data/clean") #It assumes there are no other folders inside the given path.
 
-    BUCKET_NAME = "diseases-and-income-us-nimagawa"
+    bucket_filepath = "./terraform/dataset_and_bucket/dataset_bucket_config.json"
+    with open(bucket_filepath, "r") as json_file:
+        json_config = json.load(json_file)
+
+    BUCKET_NAME = json_config["bucket"]
     CRED_PATH = "./credentials.json"
     credentials = service_account.Credentials.from_service_account_file(CRED_PATH,scopes=['https://www.googleapis.com/auth/cloud-platform'])
     CHUNK_SIZE = 262144 #Minimum chunksize allowed
